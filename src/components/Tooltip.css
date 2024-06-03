@@ -1,0 +1,88 @@
+.my-tooltip {
+    position: relative;
+    margin-top: 15%;
+    display: inline-block;
+  }
+  
+  .my-tooltiptext {
+    /* visibility: hidden; */
+    width: 200px;
+    background-color: darkcyan;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+  }
+  /* span tage content hidden */
+  span {
+    visibility: hidden;
+  }
+  
+  .my-tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    border-width: 5px;
+    border-style: solid;
+  }
+  
+  
+  .my-tooltip:hover .my-tooltiptext {
+    visibility: visible;
+  }
+  
+  
+  
+  /* css for positioning tooltip at top */
+  .t-top {
+    top: -180%;
+    left: -30%;
+    /* width: max-content!important; */
+  }
+  
+  .t-top::after {
+    left: 50%;
+    bottom: -9.5px;
+    margin-left: -5px;
+    border-color: darkcyan transparent transparent transparent;
+  }
+  
+  
+  /* css for positioning tooltip at bottom */
+  .t-bottom {
+    top: 130%;
+    left: 46%;
+    margin-left: -100px;
+  }
+  
+  .t-bottom::after {
+    left: 50%;
+    margin-left: -5px;
+    border-color: transparent transparent darkcyan transparent;
+  }
+  
+  /* css for positioning tooltip at left */
+  .t-left {
+    left: -180%;
+    /* top: 2%; */
+  }
+  
+  .t-left::after {
+    right: -10px;
+    top: 35%;
+    border-color: transparent transparent transparent darkcyan;
+  }
+  
+  /* css for positioning tooltip at right */
+  .t-right {
+    right: -180%;
+    top: -10%;
+  }
+  
+  .t-right::after {
+    left: -10px;
+    top: 35%;
+    border-color: transparent darkcyan transparent transparent;
+  }
